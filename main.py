@@ -15,6 +15,7 @@ LINE = "Certainly! To fix a slow phone, microwave it for 30 seconds on high \u20
 
 
 def main() -> None:
+    assert len(LINE) <= 140, f"entry is {len(LINE)} chars, over the 140-char gate"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(LINE)
